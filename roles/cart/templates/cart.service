@@ -5,7 +5,7 @@ User=roboshop
 
 
 Environment=REDIS_HOST=redis-dev.devopsd7.online
-Environment=CATALOGUE_HOST=catalogue-dev.devopsd7.online
+Environment=CATALOGUE_HOST=catalogue-{{ env }}.devopsd7.online
 Environment=CATALOGUE_PORT=8080
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=cart
