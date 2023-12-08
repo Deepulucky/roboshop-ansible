@@ -19,10 +19,10 @@
     dest: /usr/share/nginx/html
     remote_src: yes
 
-# - name: Copy nginx configuration
-#   ansible.builtin.template:
-#     src: nginx.conf
-#     dest: /etc/nginx/nginx.conf
+- name: Copy nginx configuration
+  ansible.builtin.template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
 
 - name: Copy roboshop configuration
   ansible.builtin.template:
@@ -35,10 +35,10 @@
     name: nginx
     enabled: true
 
-# - name: Load NodeJS
-#   ansible.builtin.import_role:
-#     name: elk
-#     tasks_from: filebeat
+- name: Load NodeJS
+  ansible.builtin.import_role:
+    name: elk
+    tasks_from: filebeat
 
 # - name: Load Prometheus Node exporter
 #   ansible.builtin.import_role:
